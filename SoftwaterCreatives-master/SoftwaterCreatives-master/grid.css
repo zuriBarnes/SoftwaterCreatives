@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+
+}
+
+body {
+    background-color: white;
+}
+
+.container {
+    background-color: white;
+    border-top: inset 8px black;
+    width: 100%;
+    height: 4rem;
+    padding: 1rem 20px;
+    display: grid;
+    grid-gap: 6px;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    
+}
+.logo {
+    font-weight: bold;
+    font-size:17px;
+}
+
+#product-section {
+    background-color: white;
+    text-align: center;
+    margin-bottom: 7.2vw;
+    display: grid;
+   
+    grid-template-rows: 2fr 100px;
+}
+
+
+#product-section .section_btn, .section_p {
+    margin-top: 9px;
+}
+
+.section_heading {
+    font-size: 20px;
+}
+
+.section_p {
+    font-size: 14px;
+}
+
+.section_btn button {
+    background-color: white;
+    color: black;
+    border: 1px solid #eee198;
+    border-radius: 5px; 
+    font-weight:bold;
+    padding: 0 25px;
+    height: 3.125rem;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    background-color: palegreen;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(60px, auto);
+    grid-template-areas: 
+        "header header header header"
+        "aside aside main main"
+        "nav nav main main"
+        "section section section section"
+        "footer footer footer footer";
+   /* transform: rotate(45deg) scale(0.7);*/
+}
+
+.content >* {
+    background-color: lightskyblue;
+}
+
+
+
+.header {
+    grid-area: header;
+}
+.aside {
+    grid-area: aside;
+}
+.my-nav {
+    grid-area: nav;
+}
+.main {
+    grid-area: main;
+}
+.section {
+    grid-area: section;
+}
+.footer {
+    grid-area: footer;
+}
